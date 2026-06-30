@@ -2,7 +2,6 @@ replicaCount: 2
 
 image:
   repository: secret-demo
-  tag: latest
 
 service:
   type: NodePort
