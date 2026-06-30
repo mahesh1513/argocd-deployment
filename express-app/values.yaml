@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: secret-demo
+  tag: latest
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30080
+
+secret:
+  DB_USERNAME: admin
+  DB_PASSWORD: password123
+
+config:
+  APP_NAME: ecommerce-api
+  ENVIRONMENT: production
+  DB_HOST: postgres-service

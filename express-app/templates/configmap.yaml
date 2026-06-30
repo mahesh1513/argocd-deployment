@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: express-config
+  namespace: dev
+
+data:
+
+  APP_NAME: {{ .Values.config.APP_NAME | quote }}
+
+  ENVIRONMENT: {{ .Values.config.ENVIRONMENT | quote }}
+
+  DB_HOST: {{ .Values.config.DB_HOST | quote }}
