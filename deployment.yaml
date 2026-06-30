@@ -20,11 +20,12 @@ spec:
     spec:
       containers:
         - name: express-container
-          image: secret-demo
-          imagePullPolicy: Never
+          image: hashicorp/http-echo
+          args:
+            - "-text=Hello from Kubernetes"
 
           ports:
-            - containerPort: 3000
+            - containerPort: 5678
     
           envFrom:
             - configMapRef:
