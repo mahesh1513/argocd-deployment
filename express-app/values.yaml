@@ -1,7 +1,7 @@
 replicaCount: 3
 
 image:
-  repository: nginx:latest
+  repository: calculator-app:v1
 
 service:
   type: NodePort
